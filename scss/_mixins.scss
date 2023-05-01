@@ -1,0 +1,42 @@
+@mixin h1 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+  color: $h-color;
+}
+
+@mixin h2 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+  color: $h-color;
+}
+
+@mixin overline {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: $default;
+}
+
+@mixin txt {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: $txt;
+}
+
+// buttons
+
+@mixin button {
+  border: none;
+  border-radius: 29px;
+  padding: 16px 30px;
+  @include overline;
+  letter-spacing: normal;
+  text-transform: none;
+  color: $bg-txt;
+  cursor: pointer;
+}

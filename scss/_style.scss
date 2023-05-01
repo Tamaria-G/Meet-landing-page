@@ -1,0 +1,228 @@
+body {
+  font-family: "Red Hat Display";
+
+  header {
+    padding-top: 80px;
+    margin-bottom: 60px;
+
+    .logo {
+      width: 120px;
+      margin: 0 auto;
+    }
+  }
+
+  // section 1
+
+  .s-1 {
+    .s-1-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+
+      .img-left,
+      .img-right {
+        max-width: 394px;
+        width: 100%;
+
+        & > img {
+          width: 100%;
+        }
+      }
+      .txt-group1 {
+        max-width: 540px;
+        width: 100%;
+        text-align: center;
+        h1 {
+          @include h1;
+        }
+        p {
+          @include txt;
+          margin: 34px 0 34px 0;
+        }
+        .buttons {
+          max-width: 348px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          .left-btn {
+            @include button;
+            background-color: $default;
+            & > span {
+              color: $txt-2;
+            }
+            &:hover {
+              background-color: $btn1-hover;
+            }
+          }
+          .right-btn {
+            @include button;
+            background-color: $btn2-default;
+
+            &:hover {
+              background-color: $btn2-hover;
+            }
+          }
+        }
+        @media (max-width:768px){
+          
+        }
+      }
+    }
+    .number {
+      margin-top: 110px;
+
+      .line {
+        width: 1px;
+        height: 84px;
+        background-color: $txt;
+        margin: 0 auto;
+        opacity: 0.5;
+      }
+      .circle {
+        width: 56px;
+        height: 56px;
+        border: 1px solid rgba(135, 135, 157, 0.5);
+        margin: 0 auto;
+        border-radius: 50%;
+        text-align: center;
+        padding: 15px;
+
+        & > span {
+          @include overline;
+          color: #87879d;
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+
+  //   section 2
+
+  .s-2 {
+    margin-top: 64px;
+    .s-2-container {
+      .img-container {
+        max-width: 1110px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .img {
+          width: 255px;
+
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+
+      .txt-group2 {
+        max-width: 540px;
+        width: 100%;
+        margin: 80px auto 72px auto;
+        text-align: center;
+
+        .overline {
+          @include overline;
+        }
+        & > h2 {
+          @include h2;
+          width: 445px;
+          margin: 16px auto 32px auto;
+        }
+        & > p {
+          @include txt;
+        }
+      }
+    }
+  }
+
+  //   footer
+
+  footer {
+    // background-image: url(../assets/desktop/image-footer.jpg);
+    // background-color: $default;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 308px;
+    background-color: $default;
+    position: relative;
+    margin-top: 192px;
+
+    .number {
+      position: absolute;
+      top: -50%;
+      left: 50%;
+
+      .line {
+        width: 1px;
+        height: 84px;
+        background-color: $txt;
+        margin: 0 auto;
+        opacity: 0.5;
+      }
+      .circle {
+        width: 56px;
+        height: 56px;
+        border: 1px solid rgba(135, 135, 157, 0.5);
+        background-color: #ffffff;
+        margin: 0 auto;
+        border-radius: 50%;
+        text-align: center;
+        padding: 15px;
+
+        & > span {
+          @include overline;
+          color: #87879d;
+          letter-spacing: normal;
+        }
+      }
+    }
+    & > img {
+      max-width: 100%;
+      opacity: 0.1;
+    }
+
+    .txt-footer {
+      position: absolute;
+      top: 116px;
+      left: 165px;
+      max-width: 1110px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+
+      & > h2 {
+        @include h2;
+        color: $bg-txt;
+        max-width: 350px;
+        width: 100%;
+      }
+      & > p {
+        @include txt;
+        color: $bg-txt;
+        max-width: 350px;
+        width: 100%;
+        margin-left: 125px;
+        margin-right: 92px;
+    }
+      & > button {
+        @include button;
+        background-color: $btn2-default;
+        & > span {
+          color: $btn2-hover-2;
+        }
+        &:hover {
+          background-color: $btn2-hover;
+        }
+      }
+    }
+  }
+}
