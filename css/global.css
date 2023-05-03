@@ -23,6 +23,16 @@ body .s-1 .s-1-container {
   align-items: center;
   max-width: 100%;
 }
+body .s-1 .s-1-container .tablet-img {
+  display: none;
+}
+@media (max-width: 768px) {
+  body .s-1 .s-1-container .tablet-img {
+    width: 100%;
+    display: block;
+    margin-bottom: 72px;
+  }
+}
 body .s-1 .s-1-container .img-left,
 body .s-1 .s-1-container .img-right {
   max-width: 394px;
@@ -31,6 +41,12 @@ body .s-1 .s-1-container .img-right {
 body .s-1 .s-1-container .img-left > img,
 body .s-1 .s-1-container .img-right > img {
   width: 100%;
+}
+@media (max-width: 768px) {
+  body .s-1 .s-1-container .img-left,
+  body .s-1 .s-1-container .img-right {
+    display: none;
+  }
 }
 body .s-1 .s-1-container .txt-group1 {
   max-width: 540px;
@@ -42,6 +58,12 @@ body .s-1 .s-1-container .txt-group1 h1 {
   font-size: 64px;
   line-height: 64px;
   color: #28283D;
+}
+@media (max-width: 376px) {
+  body .s-1 .s-1-container .txt-group1 h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
 }
 body .s-1 .s-1-container .txt-group1 p {
   font-weight: 500;
@@ -81,6 +103,11 @@ body .s-1 .s-1-container .txt-group1 .buttons .left-btn > span {
 body .s-1 .s-1-container .txt-group1 .buttons .left-btn:hover {
   background-color: #71C0D4;
 }
+@media (max-width: 376px) {
+  body .s-1 .s-1-container .txt-group1 .buttons .left-btn {
+    margin-bottom: 16px;
+  }
+}
 body .s-1 .s-1-container .txt-group1 .buttons .right-btn {
   border: none;
   border-radius: 29px;
@@ -99,6 +126,22 @@ body .s-1 .s-1-container .txt-group1 .buttons .right-btn {
 }
 body .s-1 .s-1-container .txt-group1 .buttons .right-btn:hover {
   background-color: #D9B8FF;
+}
+@media (max-width: 376px) {
+  body .s-1 .s-1-container .txt-group1 .buttons {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  body .s-1 .s-1-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 376px) {
+  body .s-1 .s-1-container {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 body .s-1 .number {
   margin-top: 110px;
@@ -144,6 +187,32 @@ body .s-2 .s-2-container .img-container .img {
 }
 body .s-2 .s-2-container .img-container .img > img {
   width: 100%;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  body .s-2 .s-2-container .img-container .img > img {
+    width: 95%;
+  }
+}
+@media (max-width: 376px) {
+  body .s-2 .s-2-container .img-container .img {
+    width: 151px;
+  }
+  body .s-2 .s-2-container .img-container .img:nth-child(1) {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 768px) {
+  body .s-2 .s-2-container .img-container {
+    width: 90%;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 376px) {
+  body .s-2 .s-2-container .img-container {
+    width: 85%;
+    flex-wrap: wrap;
+  }
 }
 body .s-2 .s-2-container .txt-group2 {
   max-width: 540px;
@@ -164,8 +233,16 @@ body .s-2 .s-2-container .txt-group2 > h2 {
   font-size: 40px;
   line-height: 44px;
   color: #28283D;
-  width: 445px;
+  max-width: 445px;
+  width: 100%;
   margin: 16px auto 32px auto;
+}
+@media (max-width: 376px) {
+  body .s-2 .s-2-container .txt-group2 > h2 {
+    width: 95%;
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 body .s-2 .s-2-container .txt-group2 > p {
   font-weight: 500;
@@ -173,24 +250,25 @@ body .s-2 .s-2-container .txt-group2 > p {
   line-height: 26px;
   color: #87879D;
 }
-body footer {
-  background-color: #4D96A9;
-  position: relative;
-  margin-top: 192px;
+@media (max-width: 376px) {
+  body .s-2 .s-2-container .txt-group2 > p {
+    font-size: 16px;
+  }
 }
-body footer .number {
-  position: absolute;
-  top: -50%;
-  left: 50%;
+@media (max-width: 376px) {
+  body .s-2 .s-2-container .txt-group2 {
+    margin: 64px auto;
+    width: 327px;
+  }
 }
-body footer .number .line {
+body .s-2 .s-2-container .number .line {
   width: 1px;
   height: 84px;
   background-color: #87879D;
   margin: 0 auto;
   opacity: 0.5;
 }
-body footer .number .circle {
+body .s-2 .s-2-container .number .circle {
   width: 56px;
   height: 56px;
   border: 1px solid rgba(135, 135, 157, 0.5);
@@ -200,7 +278,7 @@ body footer .number .circle {
   text-align: center;
   padding: 15px;
 }
-body footer .number .circle > span {
+body .s-2 .s-2-container .number .circle > span {
   font-weight: 900;
   font-size: 16px;
   line-height: 26px;
@@ -210,9 +288,45 @@ body footer .number .circle > span {
   color: #87879d;
   letter-spacing: normal;
 }
-body footer > img {
+body footer {
+  background-color: #4D96A9;
+  position: relative;
+  margin-top: -30px;
+  z-index: -1;
+}
+body footer .footer-img-tablet {
+  display: none;
+}
+@media (max-width: 768px) {
+  body footer .footer-img-tablet {
+    width: 100%;
+    display: block;
+    opacity: 0.1;
+  }
+}
+@media (max-width: 376px) {
+  body footer .footer-img-tablet {
+    display: none;
+  }
+}
+body footer .footer-img-mobile {
+  display: none;
+}
+@media (max-width: 376px) {
+  body footer .footer-img-mobile {
+    width: 100%;
+    display: block;
+    opacity: 0.1;
+  }
+}
+body footer .footer-img {
   max-width: 100%;
   opacity: 0.1;
+}
+@media (max-width: 768px) {
+  body footer .footer-img {
+    display: none;
+  }
 }
 body footer .txt-footer {
   position: absolute;
@@ -222,7 +336,6 @@ body footer .txt-footer {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   align-items: center;
 }
 body footer .txt-footer > h2 {
@@ -234,6 +347,12 @@ body footer .txt-footer > h2 {
   max-width: 350px;
   width: 100%;
 }
+@media (max-width: 376px) {
+  body footer .txt-footer > h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
 body footer .txt-footer > p {
   font-weight: 500;
   font-size: 18px;
@@ -244,6 +363,18 @@ body footer .txt-footer > p {
   width: 100%;
   margin-left: 125px;
   margin-right: 92px;
+}
+@media (max-width: 768px) {
+  body footer .txt-footer > p {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 376px) {
+  body footer .txt-footer > p {
+    width: 80%;
+    margin: 24px auto 32px auto;
+  }
 }
 body footer .txt-footer > button {
   border: none;
@@ -266,4 +397,13 @@ body footer .txt-footer > button > span {
 }
 body footer .txt-footer > button:hover {
   background-color: #D9B8FF;
+}
+@media (max-width: 768px) {
+  body footer .txt-footer {
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 92px;
+    left: 0;
+  }
 }/*# sourceMappingURL=global.css.map */
